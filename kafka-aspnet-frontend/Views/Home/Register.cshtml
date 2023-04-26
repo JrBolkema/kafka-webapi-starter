@@ -1,0 +1,16 @@
+@model kafka_aspnet_frontend.Models.UserRegistrationModel
+
+<div>
+  @using (Html.BeginForm("Register", "Home"))
+  {
+    <p>@Html.LabelFor(model => model.FirstName): @Html.TextBoxFor(model => model.FirstName, new {@class = "form-control"})
+    </p>
+    <p>@Html.LabelFor(model => model.LastName): @Html.TextBoxFor(model => model.LastName, new {@class = "form-control"})
+    </p>
+    <p>@Html.LabelFor(model => model.Email): @Html.TextBoxFor(model => model.Email, new {@class = "form-control"})</p>
+    <p>
+      <button class="btn btn-primary" type="submit">Register User</button>
+    </p>
+    <p>@ViewBag.Message</p>
+  }
+</div>
